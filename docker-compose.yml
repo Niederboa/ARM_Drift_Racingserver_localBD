@@ -32,6 +32,8 @@ services:
       - 8001:8001
 
   driftapi-db:
-    image: mongo:bionic
+    image: mongo:latest
+    environment:
+        MONGO_INITDB_HOST: host.docker.internal
     ports:
       - 27018:27017
